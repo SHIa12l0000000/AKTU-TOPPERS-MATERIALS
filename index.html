@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKTU Topper Materials</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Bottom-center popup style */
+    .popup {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 280px;
+      max-width: 90%;
+    }
+
+    .popup button {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 AKTU Topper Materials</h1>
+    <button id="toggle-theme">🌙 Dark Mode</button>
+  </header>
+
+  <section class="notice">
+    <h2>🚨 Important Notice</h2>
+    <p>
+      First pay, then you will receive the material. These notes are used by a topper who scored
+      <strong>8.27 SGPA (82%)</strong> in 1st & 2nd semesters. If you study these books, PDFs, and PYQs, you can easily score
+      above <strong>8 SGPA / 80%</strong> in AKTU and college exams (PUT, ST1, ST2).
+    </p>
+  </section>
+
+  <section class="materials">
+    <h2>📘 Study Materials & Pricing</h2>
+    <div class="card">
+      <h3>📗 One Unit (General)</h3>
+      <p>Price: ₹9</p>
+    </div>
+    <div class="card">
+      <h3>📘 Topper Notes PDF</h3>
+      <p>Price: ₹35/unit</p>
+    </div>
+    <div class="card">
+      <h3>📙 Topper Physical Farebook</h3>
+      <p>Price: ₹199/Subject</p>
+    </div>
+    <div class="card">
+      <h3>📒 Gateway Classes PDF Notes</h3>
+      <p>Price: ₹9/unit</p>
+    </div>
+    <div class="card">
+      <h3>📞 Personal Guidance Call (1 Hour)</h3>
+      <p>Price: ₹299</p>
+    </div>
+    <div class="card">
+      <h3>📍 Meet with Topper (Offline)</h3>
+      <p>Price: ₹499</p>
+    </div>
+  </section>
+
+  <section class="subjects">
+    <h2>🧪 All Subjects (AKTU 1st Year)</h2>
+    <ul>
+      <li>Engineering Physics</li>
+      <li>Engineering Chemistry</li>
+      <li>Mathematics I & II</li>
+      <li>Basic Electrical Engineering</li>
+      <li>Electronics Engineering</li>
+      <li>Mechanical Engineering</li>
+      <li>Programming For Problem Solving(PPS)</li>
+      <li>Soft Skills</li>
+      <li>Environment</li>
+    </ul>
+  </section>
+
+  <section class="pyqs">
+    <h2>📄 PYQs + Seasonal Papers</h2>
+    <p>All PYQs from AKTU and RKGIT are available, including ST1 , ST2 and PUT with price per paper set decided by admin.</p>
+  </section>
+  
+  <section class="contact">
+    <h2>📬 Contact / Buy</h2>
+    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <p>Or fill this form to buy PDFs or physical books:</p>
+    <a href="https://forms.gle/your-form-link" target="_blank" class="form-btn">📋 Open Purchase Form</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AKTU Topper Materials | Built by RKGIT STUDENT</p>
+  </footer>
+
+  <!-- Bottom Popup -->
+  <div class="popup" id="popup">
+    <span>📢 Limited-time offer: all 1st semester material price Rs 1499!</span>
+    <button onclick="document.getElementById('popup').style.display='none'">✖</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
