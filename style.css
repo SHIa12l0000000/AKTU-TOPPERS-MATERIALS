@@ -1,149 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AKTU Topper Materials</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>📚 AKTU Topper Materials</h1>
-    <button id="toggle-theme">🌙 Dark Mode</button>
-  </header>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <div class="important">
-    ⚠️ <strong>REFUND IS NOT AVAILABLE OR ALLOWED.</strong><br>
-    First read all instructions carefully, then buy.<br>
-    This is your decision, not my fault.
-  </div>
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.7;
+  background: #f4f6f9;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
 
-  <section class="notice">
-    <h2>🚨 Important Notice</h2>
-    <p>
-      First pay, then you will receive the material. These notes are used by a topper who scored
-      <strong>8.27 SGPA (82%)</strong> in 1st & 2nd semesters. If you study these books, PDFs, and PYQs, you can easily score
-      above <strong>8 SGPA / 80%</strong> in AKTU and college exams (PUT, ST1, ST2).
-    </p>
-  </section>
+/* Header */
+header {
+  background: linear-gradient(135deg, #1e90ff, #0077cc);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+#toggle-theme {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  color: #1e90ff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#toggle-theme:hover {
+  background: #f1f1f1;
+}
 
-  <section class="materials">
-    <h2>📘 Study Materials & Pricing</h2>
+/* Important Notice */
+.important {
+  background: #d90429;
+  color: #fff;
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 3px solid #a5021e;
+}
 
-    <div class="card">
-      <h3>📗 One Unit (General)</h3>
-      <p>Price: ₹9</p>
-    </div>
+/* Sections */
+section {
+  padding: 2.5rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+section h2 {
+  margin-bottom: 1.5rem;
+  color: #1e90ff;
+  font-size: 1.8rem;
+  border-left: 5px solid #1e90ff;
+  padding-left: 10px;
+}
 
-    <div class="card">
-      <h3>📘 Topper Notes PDF</h3>
-      <p>Price: ₹35/unit</p>
-    </div>
+/* Cards Grid */
+.materials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+.card p {
+  font-weight: 500;
+  color: #555;
+}
 
-    <div class="card">
-      <h3>📙 Topper Physical Farebook</h3>
-      <p>Price: ₹199/Subject</p>
-    </div>
+/* Highlighted Full Year Pack */
+.highlight {
+  border: 2px solid #d90429;
+  background: #fff5f5;
+}
+.highlight h3 {
+  color: #d90429;
+}
 
-    <div class="card">
-      <h3>📒 Gateway Classes PDF Notes</h3>
-      <p>Price: ₹9/unit</p>
-    </div>
+/* Subject Lists */
+.subjects ul {
+  list-style: disc;
+  padding-left: 2rem;
+  margin-bottom: 1.2rem;
+}
+.subjects h3 {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #444;
+}
 
-    <div class="card">
-      <h3>📄 ST-1 Single Paper</h3>
-      <p>Price: ₹19</p>
-    </div>
+/* Contact */
+.form-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 20px;
+  background: #1e90ff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.form-btn:hover {
+  background: #0d6efd;
+}
 
-    <div class="card">
-      <h3>📄 Full ST-1 (Only One Group)</h3>
-      <p>Price: ₹79</p>
-    </div>
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
 
-    <div class="card">
-      <h3>📄 Full ST-2 (Only One Group)</h3>
-      <p>Price: ₹79</p>
-    </div>
+/* Popup */
+.popup {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e90ff;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 280px;
+  max-width: 90%;
+}
+.popup button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+}
 
-    <div class="card">
-      <h3>📄 Full PUT (Only One Group)</h3>
-      <p>Price: ₹79</p>
-    </div>
-
-    <div class="card highlight">
-      <h3>🔥 Full First Year Pack</h3>
-      <p>ST-1 + ST-2 + PUT (Both Groups)</p>
-      <p><strong>Price: ₹499</strong></p>
-    </div>
-
-    <p style="text-align:center; margin-top:1rem; color:#d90429; font-weight:bold;">
-      Note: Some question papers may not be available (1–3 papers missing).
-    </p>
-  </section>
-
-  <section class="subjects">
-    <h2>🧪 All Subjects (AKTU 1st Year)</h2>
-    <h3>🔹 Physics Group</h3>
-    <ul>
-      <li>Engineering Physics</li>
-      <li>Mathematics I & II</li>
-      <li>Basic Electrical Engineering</li>
-      <li>Electronics Engineering</li>
-      <li>Mechanical Engineering</li>
-      <li>Programming For Problem Solving (PPS)</li>
-      <li>Soft Skills</li>
-      <li>Environment</li>
-    </ul>
-    <h3>🔹 Chemistry Group</h3>
-    <ul>
-      <li>Engineering Chemistry</li>
-      <li>Mathematics I & II</li>
-      <li>Basic Electrical Engineering</li>
-      <li>Electronics Engineering</li>
-      <li>Mechanical Engineering</li>
-      <li>Programming For Problem Solving (PPS)</li>
-      <li>Soft Skills</li>
-      <li>Environment</li>
-    </ul>
-  </section>
-
-  <section class="pyqs">
-    <h2>📄 PYQs + Seasonal Papers</h2>
-    <p>
-      All PYQs from AKTU and RKGIT are available, including ST-1, ST-2, and PUT.  
-      Prices are given above. Some question papers may be missing as mentioned.
-    </p>
-  </section>
-  
-  <section class="contact">
-    <h2>📬 Contact / Buy</h2>
-    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    <p>Or fill this form to buy PDFs or physical books:</p>
-    <a href="https://forms.gle/your-form-link" target="_blank" class="form-btn">📋 Open Purchase Form</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 AKTU Topper Materials | Built by RKGIT STUDENT</p>
-  </footer>
-
-  <!-- Bottom Popup -->
-  <div class="popup" id="popup">
-    <span>📢 Limited-time offer: all 1st semester material price Rs 1499!</span>
-    <button onclick="document.getElementById('popup').style.display='none'">✖</button>
-  </div>
-
-  <script>
-    // Dark mode toggle
-    document.getElementById("toggle-theme").addEventListener("click", function () {
-      document.body.classList.toggle("dark-mode");
-
-      // Change button icon
-      if (document.body.classList.contains("dark-mode")) {
-        this.textContent = "☀️ Light Mode";
-      } else {
-        this.textContent = "🌙 Dark Mode";
-      }
-    });
-  </script>
-</body>
-</html>
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode header {
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
+}
+body.dark-mode .card {
+  background: #1e1e1e;
+  color: #ddd;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+body.dark-mode .important {
+  background: #b00020;
+}
+body.dark-mode section h2 {
+  color: #90caf9;
+  border-left: 5px solid #90caf9;
+}
+body.dark-mode .form-btn {
+  background: #90caf9;
+  color: #000;
+}
+body.dark-mode footer {
+  background: #000;
+  color: #aaa;
+}
+body.dark-mode .highlight {
+  border: 2px solid #ff5252;
+  background: #2b1a1a;
+}
