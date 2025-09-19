@@ -32,7 +32,7 @@
 
     <div class="card">
       <h3>📗 One Unit (General)</h3>
-      <p>Price: ₹21</p>
+      <p>Price: ₹9</p>
     </div>
 
     <div class="card">
@@ -47,33 +47,33 @@
 
     <div class="card">
       <h3>📒 Gateway Classes PDF Notes</h3>
-      <p>Price: ₹15/unit</p>
+      <p>Price: ₹9/unit</p>
     </div>
 
     <div class="card">
       <h3>📄 ST-1 Single Paper</h3>
-      <p>Price: ₹19/unit</p>
+      <p>Price: ₹19</p>
     </div>
 
     <div class="card">
       <h3>📄 Full ST-1 (Only One Group)</h3>
-      <p>Price: ₹79/group</p>
+      <p>Price: ₹79</p>
     </div>
 
     <div class="card">
       <h3>📄 Full ST-2 (Only One Group)</h3>
-      <p>Price: ₹79/group</p>
+      <p>Price: ₹79</p>
     </div>
 
     <div class="card">
       <h3>📄 Full PUT (Only One Group)</h3>
-      <p>Price: ₹79/group</p>
+      <p>Price: ₹79</p>
     </div>
 
     <div class="card highlight">
       <h3>🔥 Full First Year Pack</h3>
       <p>ST-1 + ST-2 + PUT (Both Groups)</p>
-      <p><strong>Price: ₹499(Both Group)</strong></p>
+      <p><strong>Price: ₹499</strong></p>
     </div>
 
     <p style="text-align:center; margin-top:1rem; color:#d90429; font-weight:bold;">
@@ -87,16 +87,22 @@
     <ul>
       <li>Engineering Physics</li>
       <li>Mathematics I & II</li>
+      <li>Basic Electrical Engineering</li>
       <li>Electronics Engineering</li>
       <li>Mechanical Engineering</li>
+      <li>Programming For Problem Solving (PPS)</li>
       <li>Soft Skills</li>
+      <li>Environment</li>
     </ul>
     <h3>🔹 Chemistry Group</h3>
     <ul>
       <li>Engineering Chemistry</li>
       <li>Mathematics I & II</li>
       <li>Basic Electrical Engineering</li>
+      <li>Electronics Engineering</li>
+      <li>Mechanical Engineering</li>
       <li>Programming For Problem Solving (PPS)</li>
+      <li>Soft Skills</li>
       <li>Environment</li>
     </ul>
   </section>
@@ -126,6 +132,18 @@
     <button onclick="document.getElementById('popup').style.display='none'">✖</button>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    // Dark mode toggle
+    document.getElementById("toggle-theme").addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      // Change button icon
+      if (document.body.classList.contains("dark-mode")) {
+        this.textContent = "☀️ Light Mode";
+      } else {
+        this.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
 </body>
 </html>
