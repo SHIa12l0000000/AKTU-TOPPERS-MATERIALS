@@ -1,4 +1,4 @@
-// Run only after page is loaded
+// Run after page load
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("toggle-theme");
 
@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.textContent = "☀️ Light Mode";
   }
 
-  // Toggle theme
+  // Toggle theme on button click
   btn.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
       this.textContent = "☀️ Light Mode";
-      localStorage.setItem("theme", "dark"); // save choice
+      localStorage.setItem("theme", "dark");
     } else {
       this.textContent = "🌙 Dark Mode";
-      localStorage.setItem("theme", "light"); // save choice
+      localStorage.setItem("theme", "light");
     }
   });
 });
