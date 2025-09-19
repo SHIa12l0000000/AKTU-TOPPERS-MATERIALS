@@ -1,6 +1,11 @@
-const themeToggle = document.getElementById('toggle-theme');
+// Dark mode toggle
+document.getElementById("toggle-theme").addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
 
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  themeToggle.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+  // Change button icon
+  if (document.body.classList.contains("dark-mode")) {
+    this.textContent = "☀️ Light Mode";
+  } else {
+    this.textContent = "🌙 Dark Mode";
+  }
 });
